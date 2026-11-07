@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio — Quality Assurance Engineer</title>
+  <meta
+    name="description"
+    content="Portofolio pribadi seorang Software Engineer yang berfokus pada Quality Assurance."
+  />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo" id="nav-logo" aria-label="Beranda"></a>
+
+      <nav aria-label="Navigasi utama">
+        <ul class="navbar__links" id="nav-links"></ul>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <a class="btn btn--primary" data-cv href="#">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          <span class="navbar__cv-label">Download CV</span>
+        </a>
+
+        <button
+          class="navbar__toggle"
+          id="nav-toggle"
+          aria-label="Buka menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <div class="container hero__inner">
+          
+          <!-- BAGIAN KIRI: TEKS -->
+          <div class="hero__content">
+            <span class="hero__badge" id="hero-badge"></span>
+            <h1 class="hero__name" id="hero-name"></h1>
+            <p class="hero__role" id="hero-role"></p>
+            <p class="hero__tagline" id="hero-tagline"></p>
+  
+            <div class="hero__actions">
+              <button class="btn btn--primary" id="btn-preview-cv">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                Lihat CV
+              </button>
+              <a class="btn btn--ghost" href="#projects">Lihat Project</a>
+            </div>
+  
+            <div class="hero__socials" id="hero-socials"></div>
+          </div>
+  
+          <!-- BAGIAN KANAN: FOTO -->
+          <div class="hero__image-wrapper">
+            <img 
+              src="assets/images/foto-profil.jpeg" 
+              alt="Foto Profil" 
+              class="hero__image" 
+            />
+          </div>
+  
+        </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title">About</h2>
+        <p class="section__subtitle">Sedikit tentang saya dan apa yang saya kerjakan.</p>
+
+        <div class="about__text" id="about-text"></div>
+
+        <div class="highlights" id="hero-highlights"></div>
+
+        <div style="height: var(--space-lg);"></div>
+
+        <div class="skills" id="about-skills"></div>
+      </div>
+    </section>
+
+    <!-- ================= SERTIFIKAT ================= -->
+    <section class="section section--alt" id="certificates">
+      <div class="container">
+        <h2 class="section__title">Sertifikat</h2>
+        <p class="section__subtitle">Sertifikasi dan pelatihan yang saya ikuti.</p>
+        <div class="card-grid" id="certificates-grid"></div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECT ================= -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section__title">Project</h2>
+        <p class="section__subtitle">Sebagian project dan kontribusi yang saya kerjakan.</p>
+        <div class="card-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ================= QA ARTIFACTS ================= -->
+    <section class="section section--alt" id="artifacts">
+      <div class="container">
+        <h2 class="section__title">QA Documentation</h2>
+        <p class="section__subtitle">Dokumentasi QA yang pernah saya buat (test case, bug report).</p>
+        <div class="card-grid" id="artifacts-grid"></div>
+      </div>
+    </section>
+
+    <!-- ================= MODAL PREVIEW ================= -->
+      <div class="modal" id="cv-modal" aria-hidden="true" role="dialog">
+        <div class="modal__overlay" id="modal-overlay"></div>
+        <div class="modal__content">
+          <div class="modal__header">
+            <h3 class="modal__title" id="modal-title">Preview</h3>
+            <button class="modal__close" id="modal-close" aria-label="Tutup">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="modal__body">
+            <iframe id="cv-preview-iframe" src="" title="Preview Document" allow="autoplay"></iframe>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__socials" id="footer-socials"></div>
+      <p id="footer-copy"></p>
+    </div>
+  </footer>
+
+  <!-- JS: config dulu, baru main -->
+  <script src="data/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
