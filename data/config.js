@@ -119,6 +119,12 @@ window.PORTFOLIO_CONFIG = {
         tags: ["QA", "Manual Testing", "Postman"],
         fileId: "1zJ-ao6SnU6uqd3YHqXDnW42D1unNlfWsXRnJkNsp7hE",
       },
+      {
+        title: "Automated Live Streaming Notification System for AKB48 & JKT48 via n8n, Docker, and Telegram Bot",
+        description: "Sistem otomasi berbasis background workflow untuk memantau siaran langsung member AKB48 & JKT48 dan mengirimkan notifikasi instan ke Telegram.",
+        tags: ["n8n", "Docker", "Docker Compose", "SHOWROOM API", "Telegram Bot API", "IDN Live API", "Self-Hosted"],
+        fileId: "1JGXZPHVgez5qtXmLtdd9mEC34IlxUXhERRhhvvdrxyY",
+      },
     ],
 
     // ---------- QA ARTIFACTS ---------- SEPERTI DATA DOCUMENT PENDUKUNG
@@ -139,7 +145,7 @@ window.PORTFOLIO_CONFIG = {
       },
       {
         title: "Test Plan Document",
-        description: "Rencana pengujian (Test Plan) untuk project E-Commerce, mencakup scope, strategy, dan jadwal testing.",
+        description: "Rencana pengujian (Test Plan) untuk project OrangeHRM, mencakup scope, strategy, dan jadwal testing.",
         type: "Test Plan",
         tools: ["Google Docs"],
         fileId: "1sm3-ix2Ja9XKEkPIUtat5u2v4iJQ-QRW",
