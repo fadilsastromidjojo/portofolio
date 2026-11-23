@@ -50,10 +50,16 @@ window.PORTFOLIO_CONFIG = {
     // ---------- SERTIFIKAT ----------
     certificates: [
       {
-        title: "Bootcamp QA Engineer",
+        title: "QA Engineer Bootcamp",
         issuer: "Nusacodes",
         year: "2026",
-        fileId: "#",
+        fileId: "1Ttkb7Q4uggBhtYBq-bvCtPnYIJ2gtGOs",
+      },
+      {
+        title: "QA Engineer Bootcamp - Final Project Completion",
+        issuer: "Nusacodes",
+        year: "2026",
+        fileId: "1sKPXH1PoNzolGB1R6ki3XXNQu5KFqimh",
       },
       {
         title: "Menjadi Front-End Web Developer Expert",
